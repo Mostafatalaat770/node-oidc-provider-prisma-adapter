@@ -26,10 +26,11 @@ Then run the following commands to start the app.
 
 pnpm install # or npm install or yarn install
 
-pnpm migrate # or npm run migrate or yarn migrate
+pnpm db:migrate # or npm run migrate or yarn migrate
 
 pnpm dev # or npm run dev or yarn dev
 
+pnpm db:studio # or npm run studio or yarn studio
 ```
 
 ## Configuration
