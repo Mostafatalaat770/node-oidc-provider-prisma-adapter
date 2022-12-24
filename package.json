@@ -1,7 +1,27 @@
 {
 	"name": "node-oidc-provider-prisma-adapter",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Node OIDC Provider with Prisma Adapter",
+	"keywords": [
+		"node",
+		"oidc",
+		"provider",
+		"prisma",
+		"adapter",
+		"typescript",
+		"express",
+		"jest",
+		"cockroachdb",
+		"postgresql",
+		"mysql",
+		"sqlite",
+		"oauth2",
+		"openid"
+	],
+	"homepage": "https://github.com/Mostafatalaat770/node-oidc-provider-prisma-adapter",
+	"repository": "Mostafatalaat770/node-oidc-provider-prisma-adapter",
+	"author": "Mostafa Abouzeid <mostafatalaat770@gmail.com>",
+	"license": "MIT",
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
@@ -12,9 +32,6 @@
 		"db:migrate": "npx prisma migrate dev --name init",
 		"db:studio": "npx prisma studio"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
 	"devDependencies": {
 		"@types/express": "^4.17.15",
 		"@types/jest": "^29.2.4",
