@@ -14,7 +14,7 @@ model Session {
   grantId    String?
   userCode   String?
   uid        String?   @unique
-  expiresAt  DateTime
+  expiresAt  DateTime?
   consumedAt DateTime?
   createdAt  DateTime  @default(now())
   updatedAt  DateTime  @updatedAt
