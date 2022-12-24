@@ -1,5 +1,6 @@
 import { PrismaClient, OidcModel, Prisma } from "@prisma/client";
 import { Adapter, AdapterPayload } from "oidc-provider";
+
 const prisma = new PrismaClient();
 
 const types = [
@@ -28,7 +29,7 @@ const prepare = (doc: OidcModel) => {
 		typeof doc.payload === "object" &&
 		!Array.isArray(doc.payload);
 
-	let payload = isPayloadJson ? (doc.payload as Prisma.JsonObject) : {};
+	const payload = isPayloadJson ? (doc.payload as Prisma.JsonObject) : {};
 
 	return {
 		...payload,
@@ -104,6 +105,7 @@ export class PrismaAdapter implements Adapter {
 		if (!doc || (doc.expiresAt && doc.expiresAt < new Date())) {
 			return undefined;
 		}
+
 		return prepare(doc);
 	}
 
@@ -117,6 +119,7 @@ export class PrismaAdapter implements Adapter {
 		if (!doc || (doc.expiresAt && doc.expiresAt < new Date())) {
 			return undefined;
 		}
+
 		return prepare(doc);
 	}
 
