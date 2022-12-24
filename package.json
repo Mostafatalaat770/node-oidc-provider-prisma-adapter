@@ -5,10 +5,12 @@
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "jest",
 		"build": "npx tsc",
 		"start": "node dist/main.js",
-		"dev": "concurrently \"npx tsc --watch \" \"nodemon -q --experimental-specifier-resolution=node dist/main.js\""
+		"dev": "concurrently \"npx tsc --watch \" \"nodemon -q --experimental-specifier-resolution=node dist/main.js\"",
+		"db:migrate": "npx prisma migrate dev --name init",
+		"db:studio": "npx prisma studio"
 	},
 	"keywords": [],
 	"author": "",
