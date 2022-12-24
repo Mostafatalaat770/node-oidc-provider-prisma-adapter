@@ -7,9 +7,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Session {
+model OidcModel {
   id         String    @id
-  type       Int
+  type       Int // name of the oidc-provider model
   payload    Json
   grantId    String?
   userCode   String?
@@ -20,4 +20,5 @@ model Session {
   updatedAt  DateTime  @updatedAt
 
   @@unique([id, type])
+  @@map("oidc_model")
 }
